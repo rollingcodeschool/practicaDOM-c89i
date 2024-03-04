@@ -26,6 +26,11 @@ function crearElementoNuevo(){
     // seccionElementos.appendChild(parrafoNuevo); //agrega nodos hijos al final
     // seccionElementos.prepend(parrafoNuevo); //agrega nodos hijos al principio
     seccionElementos.insertBefore(parrafoNuevo, botonVerMas);
+    //modificar el botón
+    botonVerMas.innerHTML = 'Ocultar';
+    botonVerMas.classList.remove('btn-outline-light');
+    botonVerMas.classList.add('btnVerMas');
+    // botonVerMas.className = 'btn btnVerMas'
 }
 
 const botonVerMas = document.getElementById('btnVerMas');
