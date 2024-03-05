@@ -45,11 +45,11 @@ function crearElementoNuevo() {
 
 function obtenerDatos(e) {
   e.preventDefault();
-  console.log(e);
-  console.log("desde el evento submit");
-  const input = document.querySelector("#inputBusqueda");
+//   console.log(e);
+//   console.log("desde el evento submit");
+  const input = document.querySelector("#inputBusqueda").value;
   console.log(input);
-  console.log(input.value);
+//   console.log(input.value);
 }
 
 const botonVerMas = document.getElementById("btnVerMas");
