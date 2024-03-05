@@ -36,14 +36,26 @@ function crearElementoNuevo() {
     console.log(seccionElementos.children[2]);
     seccionElementos.removeChild(seccionElementos.children[2]);
     //resetear el botón
-    botonVerMas.className = 'btn btn-outline-light';
-    botonVerMas.innerHTML = 'Ver mas...'
+    botonVerMas.className = "btn btn-outline-light";
+    botonVerMas.innerHTML = "Ver mas...";
   }
   //   console.log(botonVerMas.className);
   //   console.log(botonVerMas.classList.contains("btn-outline-light"));
 }
 
+function obtenerDatos(e) {
+  e.preventDefault();
+  console.log(e);
+  console.log("desde el evento submit");
+  const input = document.querySelector("#inputBusqueda");
+  console.log(input);
+  console.log(input.value);
+}
+
 const botonVerMas = document.getElementById("btnVerMas");
+const formulario = document.getElementById("buscarPalabra");
+
 //esta es la sintaxis cuando la funcion que invoco tiene parametros
 // botonVerMas.addEventListener('click', function (){crearElementoNuevo(p1,p2)})
 botonVerMas.addEventListener("click", crearElementoNuevo);
+formulario.addEventListener("submit", obtenerDatos);
